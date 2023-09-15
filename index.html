@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dicument</title>
+  </head>
+
+  <body>
+    <script>
+      // find the maximum and min numb in array b;
+
+      let b = [3, 7, 8, 4, 6, 5, 9, 2, 1];
+      let a = 0;
+      let c = 0;
+
+      // ------- Min & Max Completed --------
+      
+      // Min Number in array B
+      for (let j = 0; j < b.length; j++) {
+        for (let i = 0; i < b.length; i++) {
+          if (b[i] > b[i + 1]) {
+            b[i] = b[i] + b[i + 1];
+            b[i + 1] = b[i] - b[i + 1];
+            b[i] = b[i] - b[i + 1];
+            console.log(b);
+            a = b[i];
+          }
+        }
+      }
+      console.log("Min Number in array B is ", a);
+
+      // Max Number in array B
+      for (let j = 0; j < b.length; j++) {
+        for (let i = 0; i < b.length; i++) {
+          if (b[i] < b[i + 1]) {
+            b[i] = b[i] + b[i + 1];
+            b[i + 1] = b[i] - b[i + 1];
+            b[i] = b[i] - b[i + 1];
+            c = b[i];
+            console.log(b);
+          }
+        }
+      }
+      console.log("Max Number in array B is ", c);
+
+      // }
+      // console.log(a);
+
+      // reverse string
+      let aa = "mursaleen";
+      let temp = "";
+      // let c;
+      for (let j = 0; j < aa.length/ 2; j++) {
+        console.log(j, aa[j])
+        temp = aa[j]
+        aa[j] = aa[aa.length - 1 - j]
+        aa[aa.length - j - 1] = temp
+      }
+      console.log(aa)
+      // console.log(b);
+
+      // --------- Sort Completed ----------
+
+      // for (let j = 0; j < b.length; j++) {
+      //     for (let i = 0; i < b.length; i++) {
+      //         if (b[i] > b[i + 1]) {
+      //             b[i] = b[i] + b[i + 1];
+      //             b[i + 1] = b[i] - b[i + 1];
+      //             b[i] = b[i] - b[i + 1];
+      //             console.log(b);
+      //         }
+      //     }
+      // }
+      // console.log(b);
+    </script>
+  </body>
+</html>
